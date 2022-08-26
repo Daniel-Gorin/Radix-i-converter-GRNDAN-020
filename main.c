@@ -35,8 +35,10 @@ int main()
             lo=log2(num);
             printf("%.2f",lo);
             printf("\n");
-            div=num/2;
-            printf("The integer result of the number divided by 2 is ");
+            div=num/in;
+            printf("The integer result of the number divided by ");
+            printf("%d",in);
+            printf(" is ");
             printf("%d",div);
             printf("\n");
             rem=num%in;
