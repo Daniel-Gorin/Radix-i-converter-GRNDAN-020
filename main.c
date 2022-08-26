@@ -35,10 +35,6 @@ int main()
             lo=log2(num);
             printf("%.2f",lo);
             printf("\n");
-            div=num/in;
-            printf("The integer result of the number divided by ");
-            printf("%d",in);
-            printf(" is ");
             printf("%d",div);
             printf("\n");
             rem=num%in;
@@ -59,14 +55,12 @@ void Dec2RadI(int decValue, int radValue, int size)
     int i,j, cont;
     j=0;
     char res[size];
-    char basechars[] = "0123456789ABCDEF"; //used to provide symbols for radValues greater than 9
     if (decValue == 0) {
         printf("0");//the result is always 0 if the dec Value is 0 regardless of the rad Value
     } else {
         while (decValue != 0) {
             cont = decValue % radValue;
             decValue = decValue / radValue;
-            res[j++] = basechars[cont];//results with res being the correct value but backwards
         }
         for (i = j - 1; i >= 0; --i) {//loops throught from the final value placed in res to the first value placed in res in order to make str in the correct order
             printf("%c",res[i]);//prints the result
